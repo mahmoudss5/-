@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health & Wellness</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+  <nav class="menu">
+    <ul>
+        <li class="dropdown">
+            <a href="#" id="categoriesLink">
+                <span class="menu-icon">&#9776;</span> products
+            </a>
+        </li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Account Settings</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Log out</a></li>
+        <li><a href="../untitled/index.html">track order</a></li>
+    </ul>
+</nav>
+  <header class="header">
+    <div class="search-container">
+      <input type="text" class="search-bar" placeholder="Search for products...">
+      
+    </div>
+    <h1>Health & Wellness</h1>
+    <p>Your trusted source for premium wellness products at the best prices.</p>
+    <div class="header-buttons">
+      <button class="header-btn">Scheduled Drugs</button>
+      <button class="header-btn secondary">(OTC) Drugs</button>
+    </div>
+  </header>
+  <main class="main-content">
+    <aside class="filters">
+      <h3>Filters</h3>
+      <div class="filter-group">
+        <h4>Price</h4>
+        <label><input type="checkbox" value="0-250"> Below EGP 250</label>
+        <label><input type="checkbox" value="250-500"> EGP 250 - 500</label>
+        <label><input type="checkbox" value="500-1000"> EGP 500 - 1000</label>
+        <label><input type="checkbox" value="1000+"> Above EGP 1000</label>
+      </div>
+  
+      <div class="filter-group">
+        <h4>Brand</h4>
+        <label><input type="checkbox" value="La Roche-Posay"> La Roche-Posay</label>
+        <label><input type="checkbox" value="Cerave"> Cerave</label>
+        <label><input type="checkbox" value="Mavala"> Mavala</label>
+        <label><input type="checkbox" value="Vichy"> Vichy</label>
+      </div>
+  
+      <div class="filter-group">
+        <h4>Category</h4>
+        <label><input type="checkbox" value="Oil"> Oils</label>
+        <label><input type="checkbox" value="Serum"> Serums</label>
+        <label><input type="checkbox" value="Balm"> Balms</label>
+        <label><input type="checkbox" value="Shampoo"> Shampoos</label>
+        <label><input type="checkbox" value="Lotion"> Lotions</label>
+      </div>
+  
+      <div class="filter-group">
+        <h4>Suitable For</h4>
+        <label><input type="checkbox" value="Sensitive Skin"> Sensitive Skin</label>
+        <label><input type="checkbox" value="Dry Skin"> Dry Skin</label>
+        <label><input type="checkbox" value="Oily Skin"> Oily Skin</label>
+        <label><input type="checkbox" value="All Skin Types"> All Skin Types</label>
+      </div>
+    </aside>
+
+  <main class="products-section">
+    <h2 class="section-title">Our Products</h2>
+    <div class="product-list">
+      <div class="product-card" data-brand="La Roche-Posay" data-category="Balm" data-skin-type="Sensitive Skin">
+        <img src="raw-african-follicle-booster-oil-100ml-859494.webp" alt="Raw African Oil">
+        <h2>Raw African Follicle Booster Oil</h2>
+        <p class="price">EGP 240.00</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a> 
+        </div>
+      </div>  
+      <div class="product-card" data-brand="La Roche-Posay" data-category="Balm" data-skin-type="Oily Skin">
+        <img src="la-roche-posay-cicaplast-baume-b5-soothing-repairing-balm-40ml-453104.webp" alt="Cicaplast Baume">
+        <h2>La Roche-Posay Cicaplast Baume B5</h2>
+        <p class="price">EGP 629.10</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index2.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+      <div class="product-card" data-brand="La Roche-Posay" data-category="Serum" data-skin-type="Sensitive Skin">
+        <img src="la-roche-posay-hyalu-b5-serum-30ml-338408.webp" alt="Hyalu B5 Serum">
+        <h2>La Roche-Posay Hyalu B5 Serum</h2>
+        <p class="price">EGP 989.10</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+      <div class="product-card" data-brand="Cerave" data-category="Lotion" data-skin-type="All Skin Types">
+        <img src="cerave-facial-lotion-pm-52ml-783120.webp" alt="Cerave Lotion">
+        <h2>Cerave Facial Lotion PM</h2>
+        <p class="price">EGP 377.10</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+      <div class="product-card" data-brand="Cerave" data-category="Serum" data-skin-type="Dry Skin">
+        <img src="cerave-eye-repair-cream-14ml-165155.webp" alt="Cerave Eye Repair Cream - 14ml">
+        <h2>Cerave Eye Repair Cream - 14ml</h2>
+        <p class="price">EGP 900</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+      <div class="product-card" data-brand="Mavala" data-category="Balm" data-skin-type="Sensitive Skin">
+        <img src="sasfsf.webp" alt="Mavala Double Lashes - 10ml ">
+        <h2>Mavala Double Lashes - 10ml</h2>
+        <p class="price">EGP 800</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+      <div class="product-card" data-brand="Vichy" data-category="Shampoo" data-skin-type="All Skin Types">
+        <img src="vichy-dercos-anti-dandruff-shampoo-for-normal-to-oily-hair-200ml-412210.webp" alt="Cicaplast Baume">
+        <h2>Vichy Dercos Anti-Dandruff Shampoo For Normal To Oily Hair</h2>
+        <p class="price">EGP 455</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+      <div class="product-card" data-brand="Vichy" data-category="Serum" data-skin-type="Dry Skin">
+        <img src="vichy-48hr-anti-perspirant-treatment-roll-on-50ml-167539.webp" alt="Cicaplast Baume">
+        <h2>Vichy 48 Hours Anti Perspirant Deodorant Intensive Treatment Roll On – 50ml </h2>
+        <p class="price">EGP 250</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+      <div class="product-card" data-brand="Cerave" data-category="Lotion" data-skin-type="Sensitive Skin">
+        <img src="cerave-foaming-cleanser-236ml-590954.webp" alt="Cicaplast Baume">
+        <h2>Cerave Foaming Cleanser </h2>
+        <p class="price">EGP 358</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+      <div class="product-card" data-brand="Cerave" data-category="Lotion" data-skin-type="Sensitive Skin">
+        <img src="cerave-moisturizing-lotion-236ml-702103.webp" alt="Cicaplast Baume">
+        <h2>Cerave Moisturizing Lotion </h2>
+        <p class="price">EGP 450</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+      <div class="product-card" data-brand="La Roche-Posay" data-category="Serum" data-skin-type="Oily Skin">
+        <img src="la-roche-posay-effaclar-ultra-concentrated-serum-30ml-208366.webp" alt="Cicaplast Baume">
+        <h2>La Roche-Posay Effaclar Ultra Concentrated Serum - 30ml</h2>
+        <p class="price">EGP 1100</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+      <div class="product-card" data-brand="La Roche-Posay" data-category="Lotion" data-skin-type="Sensitive Skin">
+        <img src="la-roche-posay-anthelios-xl-ultra-light-tinted-fluid-spf50-50ml-279302.webp" alt="Cicaplast Baume">
+        <h2>La Roche-Posay Anthelios UV Mune 400 Tinted Fluid SPF50+ - 50ml</h2>
+        <p class="price">EGP 629.10</p>
+        <div class="card-buttons">
+          <button class="add-to-bag">Add to Bag</button>
+          <a href="index1.html" target="_blank">
+            <button class="details-btn">Details</button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const checkboxes = document.querySelectorAll(".filters input[type='checkbox']");
+      const products = document.querySelectorAll(".product-card");
+  
+      // Function to filter products
+      function filterProducts() {
+        const activeFilters = {
+          price: [],
+          brand: [],
+          category: [],
+          skinType: [],
+        };
+  
+        // Gather selected filters
+        checkboxes.forEach((checkbox) => {
+          if (checkbox.checked) {
+            const value = checkbox.value;
+            const group = checkbox.closest(".filter-group").querySelector("h4").textContent.toLowerCase();
+            if (group === "price") {
+              activeFilters.price.push(value);
+            } else if (group === "brand") {
+              activeFilters.brand.push(value);
+            } else if (group === "category") {
+              activeFilters.category.push(value);
+            } else if (group === "suitable for") {
+              activeFilters.skinType.push(value);
+            }
+          }
+        });
+  
+        // Show/hide products based on filters
+        products.forEach((product) => {
+          const productPrice = parseFloat(product.querySelector(".price").textContent.replace("EGP", "").trim());
+          const productBrand = product.dataset.brand;
+          const productCategory = product.dataset.category;
+          const productSkinType = product.dataset.skinType;
+  
+          let matches = true;
+  
+          // Check price
+          if (activeFilters.price.length) {
+            matches =
+              activeFilters.price.some((range) => {
+                if (range === "0-250") return productPrice < 250;
+                if (range === "250-500") return productPrice >= 250 && productPrice <= 500;
+                if (range === "500-1000") return productPrice > 500 && productPrice <= 1000;
+                if (range === "1000+") return productPrice > 1000;
+              }) && matches;
+          }
+  
+          // Check brand
+          if (activeFilters.brand.length) {
+            matches = activeFilters.brand.includes(productBrand) && matches;
+          }
+  
+          // Check category
+          if (activeFilters.category.length) {
+            matches = activeFilters.category.includes(productCategory) && matches;
+          }
+  
+          // Check skin type
+          if (activeFilters.skinType.length) {
+            matches = activeFilters.skinType.includes(productSkinType) && matches;
+          }
+  
+          // Show or hide product
+          product.style.display = matches ? "block" : "none";
+        });
+      }
+  
+      // Attach event listeners to checkboxes
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", filterProducts);
+      });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      const searchInput = document.querySelector('.search-bar');
+      searchInput.addEventListener('input', (event) => {
+        const query = event.target.value.toLowerCase();
+        const products = document.querySelectorAll('.product-card');
+
+        products.forEach((product) => {
+          const productName = product.querySelector('h2').textContent.toLowerCase();
+          if (productName.includes(query)) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Prescription</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* الأساسيات */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1d3c60, #071739);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* نموذج رفع الروشتة */
+        .form-container {
+            background: #fff;
+            color: #333;
+            border-radius: 15px;
+            padding: 40px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            margin-top: 70px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: 700;
+            color: #071739;
+        }
+
+        .input-field {
+            margin: 20px 0;
+            font-size: 16px;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .input-field[type="file"] {
+            padding: 10px 0;
+        }
+
+        .submit-button {
+            background: #071739;
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #1d3c60;
+        }
+
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+
+        /* الفوتر */
+        .footer {
+            background: linear-gradient(135deg, #1d3c60, #071739);
+
+            padding: 40px 20px;
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            margin-top: 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-col {
+            width: 25%;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #dddddd;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            margin: 0 10px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            color: #3c4e68;
+            text-align: center;
+            line-height: 40px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #1d3c60;
+            color: #fff;
+        }
+
+        /* تخصيص محتوى الفوتر في الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-col {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        nav {
+    height: 10px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.menu {
+    padding :50px 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: whitesmoke;
+}
+
+.menu .logo img {
+    height: 70px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Main Menu Styling */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative; 
+}
+
+.menu a {
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #3c4e68;
+    display: block;
+    position: relative;
+    padding: 4px 0;
+}
+
+/* Add Menu Icon */
+.menu .menu-icon {
+    font-size: 26px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+
+.menu a::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #3c4e68;
+    transition: 0.5s transform ease;
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0 50%;
+}
+
+.menu a:hover::before {
+    transform: scale3d(1, 1, 1);
+}
+
+nav ul ul {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    top: 40px; /* Adjust for alignment with parent link */
+    left: 0;
+    background: #fff; /* Background for dropdown */
+    border: 1px solid #ddd; /* Optional border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 10;
+}
+
+
+nav ul ul li {
+    float: none;
+    display: list-item;
+    width: 170px;
+    text-align: left; 
+    padding: 5px 10px;
+}
+
+nav ul ul li a {
+    font-size: 18px;
+    text-transform: none; 
+    color: #3c4e68;
+    padding: 5px;
+}
+
+
+li > a:after {
+    content: ''; 
+}
+    </style>
+    <nav class="menu">
+    <ul>
+        <li class="dropdown">
+            <a href="#" id="categoriesLink">
+                <span class="menu-icon">&#9776;</span> Categories
+            </a>
+            <ul id="dropdownMenu">
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Account Settings</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Log out</a></li>
+    </ul>
+</nav>
+</head>
+<body>
+
+    <!-- نموذج رفع الروشتة -->
+    <div class="form-container">
+        <h1>Upload Prescription</h1>
+        <input type="file" class="input-field" placeholder="Upload Prescription Image">
+        <textarea class="input-field" placeholder="Write any additional information"></textarea>
+        <button class="submit-button">Submit</button>
+        <div class="confirmation-message">
+            <p>Your details have been sent to the pharmacist. Your order is awaiting approval.</p>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Online Shop</h4>
+                <ul>
+                    <li><a href="#">Scheduled drugs</a></li>
+                    <li><a href="#">(OTC) drugs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/webstorm-icon-logo.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>WS playground</title>
+    <link rel="stylesheet" href="cs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav class="menu">
+    <ul>
+        <li class="dropdown">
+            <a href="../jana/index.html" id="categoriesLink">
+                <span class="menu-icon">&#9776;</span> products
+            </a>
+            <ul id="dropdownMenu">
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+            
+            </ul>
+        </li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Account Settings</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Log out</a></li>
+        <li><a href="/index.html">track order</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <h1>Track Your Order</h1>
+    <p>Enter your tracking number to get the latest status of your order.</p>
+    <i  id="icon" class="fa-solid fa-truck-fast fa-2xl"></i>
+    <div class="input-container">
+        <input type="text" id="orderid" placeholder="Enter order id"/>
+        <br>
+        <button id="button">Track Order</button>
+    </div>
+
+    <div class="order-details" id="orderDetails" style="display: none;">
+        <div class="status-card">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Shipped</h3>
+            <p><strong>Date Shipped:</strong> <span id="shipDate"></span></p>
+        </div>
+
+        <div class="status-card">
+            <i class="fa-solid fa-box-open"></i>
+            <h3>In Transit</h3>
+            <p><strong>Delivered to Courier on:</strong> <span id="courierDate"></span></p>
+        </div>
+
+        <div class="status-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Current Location</h3>
+            <p><strong>Location:</strong> <span id="currentLocation"></span></p>
+        </div>
+
+        <div class="status-card">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>Expected Delivery</h3>
+            <p><strong>Expected Delivery Date:</strong> <span id="expectedDeliveryDate"></span></p>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <!-- العمود الأول -->
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <!-- العمود الثاني -->
+            <div class="footer-column">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                </ul>
+            </div>
+            <!-- العمود الثالث -->
+            <div class="footer-column">
+                <h4>Online Shop</h4>
+                <ul>
+                    <li><a href="#">Scheduled drugs</a></li>
+                    <li><a href="#">(OTC) drugs</a></li>
+                </ul>
+            </div>
+            <!-- العمود الرابع -->
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script type="module" src="javascript.js"></script>
+</html>
